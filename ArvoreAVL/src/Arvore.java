@@ -123,10 +123,14 @@ public class Arvore {
 					raiz = raiz.getEsquerdo();
 				}
 			}else {
-				if(raiz.getEsquerdo().getValor()==valor) {
+				if(raiz.getEsquerdo()!= null) {
+					if(raiz.getEsquerdo().getValor()==valor) {
 					raiz.setEsquerdo(vazio);
-				}else if(raiz.getDireito().getValor()==valor){
+					}
+				}else if(raiz.getDireito()!= null) {
+					if(raiz.getDireito().getValor()==valor) {
 					raiz.setDireito(vazio);
+					}
 				}
 			}
 		}
@@ -249,7 +253,7 @@ public class Arvore {
 
 		if(no!=null) {
 			if(no.getValor()==valor) {
-				System.out.println("Valor est· na ·rvore :)");
+				System.out.println("Valor est√° na √°rvore :)");
 				return no;
 			}
 			if(valor>no.getValor()) {
@@ -259,7 +263,7 @@ public class Arvore {
 
 			}
 		}
-		System.out.println("Valor n„o est· na ·rvore :(");
+		System.out.println("Valor n√£o est√° na √°rvore :(");
 
 		return null;
 
